@@ -43,7 +43,7 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js']
       },
       jade: {
-        files: ['<% yeoman.app %>/views/index.jade', '<% yeoman.app %>/views/{,*/}*.jade'],
+        files: ['<% yeoman.app %>/*.jade', '<% yeoman.app %>/views/{,*/}*.jade'],
         tasks: ['jade']
       },
       livereload: {
@@ -136,13 +136,13 @@ module.exports = function (grunt) {
       }
     },
 
-    // Automatically inject Bower components into the app
+    // ??? Automatically inject Bower components into the app
     'bower-install': {
       app: {
         //html: '<%= yeoman.app %>/index.html',
-        //ignorePath: '<%= yeoman.app %>/'
-        html: '.tmp/index.html',
-        ignorePath: '<%= yeoman.app %>/'
+        ignorePath: '<%= yeoman.app %>/',
+        html: '.tmp/index.html'
+        //ignorePath: '.tmp/'
       }
     },
 
@@ -364,7 +364,7 @@ module.exports = function (grunt) {
     // cssmin: {
     //   dist: {
     //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
+    //       '<%= yeoman.dist %>/styles/app.css': [
     //         '.tmp/styles/{,*/}*.css',
     //         '<%= yeoman.app %>/styles/{,*/}*.css'
     //       ]

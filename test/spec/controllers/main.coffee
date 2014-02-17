@@ -3,7 +3,7 @@
 describe 'Controller: MainCtrl', () ->
 
   # load the controller's module
-  beforeEach module 'markupAngularApp'
+  beforeEach module 'mappApp'
 
   MainCtrl = {}
   scope = {}
